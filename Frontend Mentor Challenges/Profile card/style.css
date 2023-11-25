@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*{
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    background: hsl(185, 75%, 39%);
+    background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 48vw bottom 40vh, left 45vw top 44vh;
+}
+
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+}
+
+.card{
+    width: 320px;
+    position: relative;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.card-top{
+    background: url(./images/bg-pattern-card.svg);
+    height: 150px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.card img{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+    top: 100px;
+    left: 100px;
+}
+
+.card-actions{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    margin-top: 40px;
+    border-top: 2px solid rgba(182, 175, 175, 0.233);
+    margin-bottom: 20px;
+}
+
+.card-body{
+    margin-top: 80px;
+}
+
+h5{
+    font-size: 17px;
+}
+
+.light-gray{
+    color: hsl(0, 0%, 59%);
+}
+
+.card-actions p{
+    font-size: 12px;
+}
