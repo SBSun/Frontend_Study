@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+
+    --clr-brightorange: hsl(31, 77%, 52%);
+    --clr-darkcyan: hsl(184, 100%, 22%);
+    --clr-verydarkcyan: hsl(179, 100%, 13%);
+    --clr-transparentwhite: hsla(0, 0%, 100%, 0.55);
+    --clr-verylightgray: hsl(0, 0%, 95%);
+
+    --fs: 15px;
+
+    --font-family-bigshouldersdisplay: 'Big Shoulders Display', sans-serif;
+    --font-family-lexenddeca: 'Lexend Deca', sans-serif;
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-lexenddeca);
+    font-size: var(--fs);
+    font-weight: var(--fw-400);
+    color: var(--clr-verylightgray);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-flex {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+    padding: 40px;
+}
+
+.card-left {
+    background-color: var(--clr-brightorange);
+}
+
+.card-center {
+    background-color: var(--clr-darkcyan);
+}
+
+.card-right {
+    background-color: var(--clr-verydarkcyan);
+}
+
+p.title {
+    font-family: var(--font-family-bigshouldersdisplay);
+    font-size: 38px;
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+    margin-top: 28px;
+}
+
+p.subtitle {
+    line-height: 1.8;
+    margin-top: 28px;
+    padding-right: 28px;
+    color: var(--clr-transparentwhite);
+}
+
+.card-left .a{
+    color: var(--clr-brightorange);
+}
+
+.card-center .a {
+    color: var(--clr-darkcyan);
+}
+
+.card-right .a {
+    color: var(--clr-verydarkcyan);
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: var(--clr-verylightgray);
+    padding: 15px 28px;
+    margin-top: 80px; 
+    border-radius: 28px;
+}
+
+.card a:hover {
+    color: var(--clr-verylightgray);
+    background: transparent;
+}
+
+@media only screen and (max-width: 768px) {
+    .card-flex {
+        grid-template-columns: 1fr;
+    }
+}
