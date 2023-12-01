@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root {
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+    --clr-darkblue: hsl(234, 12%, 34%);
+    --clr-grayishblue: hsl(229, 6%, 66%);
+    --clr-lightgray: hsl(0, 0%, 98%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: var(--clr-lightgray);
+    color: var(--clr-grayishblue);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px;
+}
+
+header {
+    text-align: center;
+}
+
+header h2 {
+    font-size: 2rem;
+    font-weight: 200;
+    color: var(--clr-darkblue);
+}
+
+header h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--clr-darkblue);
+}
+
+header p {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.box {
+    background-color: white;
+    border-radius: 7px;
+    padding: 30px;
+    text-align: right;
+    box-shadow: 0 10px 15px 3px hsla(212, 86%, 64%, .2);
+}
+
+.box-text {
+    text-align: left;
+    padding-bottom: 50px;
+}
+
+.box-text h5 {
+    font-size: 20px;
+    color: var(--clr-darkblue);
+    margin-bottom: 10px;
+}
+
+.box1 {
+    border-top: 4px solid var(--clr-cyan);
+}
+
+.box2 {
+    border-top: 4px solid var(--clr-red);
+}
+
+.box3 {
+    border-top: 4px solid var(--clr-orange);
+}
+
+.box4 {
+    border-top: 4px solid var(--clr-blue);
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.box1, 
+.box4 {
+    align-self: center;
+}
+
+@media only screen and (max-width: 768px){
+    .main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    body {
+        font-size: 13px;
+    }
+
+    header h2 {
+        font-size: 20px;
+    }
+
+    header h3 {
+        font-size: 20px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+
+    .box-text {
+        padding-bottom: 30px;
+    }
+}
