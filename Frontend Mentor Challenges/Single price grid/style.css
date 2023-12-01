@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+:root {
+    --clr-cyan: hsl(179, 62%, 43%);
+    --clr-brightyellow: hsl(71, 73%, 54%);
+    --clr-lightgray: hsl(204, 43%, 93%);
+    --clr-grayishblue: hsl(218, 22%, 67%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: var(--clr-lightgray);
+    color: var(--clr-lightgray);
+    transform: translate(0, 50%);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px 3px hsla(241, 42%, 51%, 0.2);
+}
+
+.top {
+    padding: 35px;
+    background-color: white;
+}
+
+.top h3 {
+    font-size: 22px;
+    color: var(--clr-cyan);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.top h4 {
+    font-size: 18px;
+    color: var(--clr-brightyellow);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.top p {
+    color: var(--clr-grayishblue);
+    line-height: 1.8;
+}
+
+.bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.bottom-left {
+    background-color: var(--clr-cyan);
+    padding: 35px;
+}
+
+.bottom-right {
+    background-color: hsl(179, 55%, 48%);
+    padding: 35px;
+}
+
+p.price {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: hsla(204, 43%, 93%, 60%);
+}
+
+p.price span {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--clr-lightgray);
+    margin-right: 10px;
+}
+
+.bottom-left a {
+    display: block;
+    border-radius: 8px;
+    text-decoration: none;
+    background-color: var(--clr-brightyellow);
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    box-shadow: 0 5px 5px 3px hsla(241, 42%, 51%, 0.2);
+}
+
+.bottom-left a:hover {
+    background-color: white;
+    color: black;
+}
+
+.bottom-right p{
+    margin-top: 20px;
+    line-height: 1.5;
+}
