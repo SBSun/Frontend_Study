@@ -17,6 +17,10 @@
 body {
     background-color: var(--clr-grayishblue);
     font-family: 'Barlow Semi Condensed', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 h3,
@@ -24,8 +28,13 @@ h4 {
     font-weight: 600;
 }
 
-p {
+p,
+small {
     font-weight: 500;
+    opacity: .5;
+}
+
+p {
     line-height: 1.6;
 }
 
@@ -38,7 +47,7 @@ p {
 
 .cards {
     position: relative;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     color: var(--clr-white);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
@@ -46,6 +55,10 @@ p {
 
 .cards.card-1 {
     background-color: var(--clr-violet);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-size: 120px;
 }
 
 .cards.card-2 {
@@ -62,25 +75,25 @@ p {
     background-color: var(--clr-white);
 }
 
-.cards .quotation {
-    position: absolute;
-    right: 20px;
-    top: 0;
-    width: 90px;
-}
-
 .cards .image {
     display: flex;
     align-items: center;
 }
 
 .cards .image img {
+    width: 40px;
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-top: 5px;
+    border: 2px solid rgb(188, 115, 211);
+}
+
+.cards h3 {
+    font-size: 16px;
 }
 
 .cards h4 {
-    margin: 20px 0;
+    margin: 15px 0;
     font-size: 20px;
 }
 
