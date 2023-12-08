@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+img {
+    display: block;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: var(--light-grayish-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 285px minmax(300px, 445px);
+    max-width: 730px;
+    border-radius: 10px;
+}
+
+.img-box {
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
+}
+
+.img-box img {
+    width:  100%;
+    height: 100%;
+    /* 가로세로비가 일치하지 않으면 객체 일부가 잘려나간다. */
+    object-fit: cover;
+    object-position: left;
+    transition: all 0.5s ease;
+}
+
+.content {
+    background-color: var(--white);
+    padding: 32px 40px;
+    border-radius: 0 10px 10px 0;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--very-dark-grayish-blue);
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.subText {
+    color: var(--desaturated-dark-blue);
+    margin-bottom: 18px;
+    line-height: 1.5;
+}
+
+.cotent-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+}
+
+.author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.name {
+    color: var(--very-dark-grayish-blue);
+    font-weight: 700;
+}
+
+.date {
+    color: var(--grayish-blue);
+}
+
+.share {
+    position: relative;
+}
+
+.share_btn {
+    background-color: var(--light-grayish-blue);
+    padding: 8px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: var(--desaturated-dark-blue);
+    transition: all 0.25s ease;
+}
+
+.share-btn:hover, .share-btn.active {
+    background-color: var(--desaturated-dark-blue);
+    color: var(--light-grayish-blue);
+}
+
+.share-option {
+    --scale: 0;
+    --translateX: -50%;
+    --translateY: 0;
+    
+    background: var(--very-dark-grayish-blue);
+    position: absolute;
+    bottom: calc(100% + 28px);
+    left:   50%;
+    transform: translate(var(--translateX), var(--translateY)) scale(var(--scale));
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 17px 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px -5px #0003;
+    transform-origin: bottom;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.share-option.active {
+    visibility: visible;
+}
+
+.share-option::after {
+    content: '';
+    background: var(--very-dark-grayish-blue);
+    width:  20px;
+    height: 20px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -60%) rotate(45deg);
+}
+
+.share-option span {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: var(--grayish-blue);
+    margin-right: 5px;
+}
+
+.share-option img {
+    font-size: 22px;
+}
