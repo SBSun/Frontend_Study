@@ -110,30 +110,23 @@ body {
     position: relative;
 }
 
-.share_btn {
-    background-color: var(--light-grayish-blue);
+.share-btn {
     padding: 8px;
     border-radius: 50%;
     font-size: 20px;
-    color: var(--desaturated-dark-blue);
     transition: all 0.25s ease;
 }
 
 .share-btn:hover, .share-btn.active {
-    background-color: var(--desaturated-dark-blue);
-    color: var(--light-grayish-blue);
+    filter: opacity(.5) drop-shadow(0 0 0 black);
 }
 
 .share-option {
-    --scale: 0;
-    --translateX: -50%;
-    --translateY: 0;
-    
     background: var(--very-dark-grayish-blue);
     position: absolute;
     bottom: calc(100% + 28px);
     left:   50%;
-    transform: translate(var(--translateX), var(--translateY)) scale(var(--scale));
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
     gap: 12px;
