@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="logo">
+    <img src="images/logo.svg" alt="">
+  </div>
+  <main>
+    <article>
+      <div class="logo">
+        <img src="images/logo.svg" alt="">
+      </div>
+
+      <h1><span>We're</span> coming soon</h1>
+
+      <p>Hello fellow shoppers! We're currently building our new fashion store. 
+        Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+      <!-- off 브라우저가 자동으로 값을 완성하지 않으므로, 사용자는 매번 각 입력 필드에 값을 끝까지 입력해야 함. -->
+      <form autocomplete="off">
+        <div>
+          <input type="email" name="email" id="email" placeholder="Email Address" required>
+
+          <label for="email">
+            <img src="images/icon-error.svg" alt="">
+          </label>
+
+          <button type="submit" class="submit">
+            <img src="images/icon-arrow.svg" alt="">
+          </button> 
+        </div>
+        <p class="error">Please provide a vaild email</p>
+      </form>
+    </article>
+
+    <article>
+      <!--  뷰포트(viewport)의 너비에 따라 커지거나 작아지는 하나의 이미지를 사용하는 대신 서로 다른 디스플레이나 기기에서 해당 뷰포트에 알맞게 채워질 수 있도록 여러 개의 이미지 중에서 적절한 이미지를 사용할 수 있도록 해준다. -->
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/hero-desktop.jpg"
+        />
+        <img src="./images/hero-mobile.jpg" alt="" />
+      </picture>
+    </article>
+    
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
